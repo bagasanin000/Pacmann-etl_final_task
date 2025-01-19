@@ -1,0 +1,43 @@
+MARKETING DATA TRANSFORMATION REQUIREMENTS
+
+1. Normalize all string values to lowercase
+2. Drop all duplicated data 
+3. Rename some columns:
+    - id -> product_code
+    - name -> product_name
+    - prices.availability -> availability
+    - prices.condition -> condition
+    - prices.currency -> price_currency
+    - prices.dateSeen -> latest_date
+    - prices.isSale -> is_sale
+    - prices.merchant -> merchant
+    - primaryCategories -> main_category
+    - categories -> sub_category
+    - imageURLs -> image
+    - sourceURLs -> link
+4. Drop some columns:
+    - upc
+    - weight
+    - prices.sourceURLs
+    - ean
+    - keys
+    - prices.shipping
+    - dateAdded
+    - dateUpdated
+    - manufacturer
+    - manufacturerNumber
+    - Unnamed: 26
+    - Unnamed: 27
+    - Unnamed: 28
+    - Unnamed: 29
+    - Unnamed: 30
+5. Make new column:
+    - Calculate average values from amountMax and amountMin columns
+    - Make it as avg_price column
+6. Map new values on some columns:
+    - prices.avail (availability): map values as boolean (True and False).
+    - prices.condition (condition): map values to new, used, and refurbished.
+    - primaryCategories (main_category): change all values to electronics.
+7. Change data type on some columns:
+    - Cast the availability column to boolean.
+    - Cast the latest_date column to datetime.

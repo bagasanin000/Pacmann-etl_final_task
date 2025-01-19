@@ -1,0 +1,39 @@
+SALES DATA TRANSFORMATION REQUIREMENTS
+
+1. Normalize all string values to lowercase
+2. Drop all duplicated data
+3. Remove all non numeric characters on some columns:
+    - ratings
+    - no_of_ratings
+    - discount_price
+    - actual_price
+4. Drop a column:
+    - Unnamed: 0
+5. Rename a column:
+    - name -> product_name 
+6. Convert the price values in the discount_price and actual_price columns from INR to USD
+7. Make a new column: price_currency
+8. Map new values on main_category column:
+    - "women's clothing" -> 'women's fashion'
+    - "men's clothing" -> 'men's fashion'
+    - "men's shoes" -> 'men's fashion'
+    - "women's shoes" -> 'women's fashion'
+    - "kids' fashion" -> 'kid's fashion'
+    - 'sports & fitness' -> 'sports & outdoor'
+    - 'accessories' -> 'jewelry & accessories'
+    - 'appliances' -> 'electronics'
+    - 'tv, audio & cameras' -> 'electronics'
+    - 'car & motorbike' -> 'automotive & motorcycle'
+    - 'stores' -> 'retail store'
+    - 'grocery & gourmet foods' -> 'food & beverages'
+    - 'music' -> 'film & music'
+    - 'home, kitchen, pets' -> 'home & kitchen'
+    - "toys & baby products" -> 'toys & baby'
+9. Cast some columns into numeric type:
+    - ratings
+    - no_of_ratings
+    - actual_price
+    - discount_price
+10. Drop rows with missing values in the no_of_ratings column
+11. Impute missing values in actual_price column with the median values from each main category
+12. Impute missing values in discount_price column with 0 (no discount)

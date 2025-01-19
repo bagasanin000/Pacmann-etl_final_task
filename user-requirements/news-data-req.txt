@@ -1,0 +1,9 @@
+NEWS DATA SCRAPING REQUIREMENTS
+
+1. Add news_title
+2. Add author
+3. Add article (news article)
+4. Add time on some columns:
+    - news_created
+    - scrapped_at
+5. Add image_url from the article

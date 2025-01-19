@@ -1,0 +1,5 @@
+.env
+pipeline
+etl-project
+ETL_notebook.ipynb
+ETL_notebook_load.ipyb
